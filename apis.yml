@@ -9,10 +9,10 @@ description: >-
 type: Index
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Software Architecture
-  - System Integration
   - Design Patterns
   - Enterprise Architecture
+  - Software Architecture
+  - System Integration
 url: >-
   https://raw.githubusercontent.com/api-evangelist/integration-patterns/refs/heads/main/apis.yml
 created: '2025-01-01'
