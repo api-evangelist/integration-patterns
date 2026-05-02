@@ -1,0 +1,99 @@
+aid: integration-patterns:rules
+name: Integration Patterns Usage Rules
+description: >-
+  Operational rules and guardrails for applying Enterprise Integration
+  Patterns (EIP) to real systems. These rules cover when to use messaging
+  versus request/response, channel and endpoint design, routing and
+  transformation, error handling, and the operational concerns of system
+  management patterns in modern microservice and event-driven environments.
+modified: '2026-04-28'
+rules:
+  - id: name-the-pattern
+    category: Vocabulary
+    statement: >-
+      Use canonical EIP names (e.g., Content-Based Router, Message Filter,
+      Aggregator, Wire Tap) in design documents and code reviews so that
+      teams share a precise, technology-independent vocabulary.
+  - id: messaging-vs-rpc
+    category: Style
+    statement: >-
+      Reach for asynchronous messaging when components must be loosely
+      coupled, survive partial failure, or scale independently; reach for
+      synchronous request/response when a caller genuinely needs an
+      immediate answer.
+  - id: channel-per-purpose
+    category: Messaging Channels
+    statement: >-
+      Define one channel per message type or business intent rather than a
+      single firehose channel; this makes Datatype Channel and
+      Publish-Subscribe semantics explicit.
+  - id: durable-channels
+    category: Messaging Channels
+    statement: >-
+      Use Guaranteed Delivery (durable, persistent) channels for any
+      message whose loss would damage the business; reserve volatile
+      channels for telemetry-class data.
+  - id: command-vs-event
+    category: Message Construction
+    statement: >-
+      Distinguish Command Messages (do this) from Event Messages
+      (this happened) in both naming and routing; never overload a single
+      message type to mean both.
+  - id: correlation-ids
+    category: Message Construction
+    statement: >-
+      Stamp every message with a correlation ID so that Request-Reply,
+      Aggregator, and Saga-style flows can be traced end to end.
+  - id: idempotent-consumers
+    category: Endpoints
+    statement: >-
+      Make every message endpoint idempotent so that duplicate delivery
+      (which is normal in at-least-once messaging) does not corrupt state.
+  - id: poison-message-handling
+    category: Reliability
+    statement: >-
+      Route un-processable messages to a Dead Letter Channel after a
+      bounded number of redelivery attempts rather than letting them block
+      a queue or loop forever.
+  - id: content-based-routing
+    category: Routing
+    statement: >-
+      Use a Content-Based Router or Message Filter when only a subset of
+      consumers should see a message; do not push routing logic into every
+      consumer.
+  - id: transformer-isolation
+    category: Transformation
+    statement: >-
+      Implement Message Translator and Content Enricher as dedicated
+      components so that schema differences between systems are visible
+      and testable, not buried inside business logic.
+  - id: orchestration-vs-choreography
+    category: Process
+    statement: >-
+      Use Process Manager / orchestration when a single business process
+      needs central control, audit, and timeouts; use choreography
+      (event-driven, no central coordinator) when independence and
+      autonomy of services matter more than central oversight.
+  - id: wire-tap-for-observability
+    category: System Management
+    statement: >-
+      Use Wire Tap and Message History patterns to add observability to
+      live channels without altering production message flow.
+  - id: control-bus
+    category: System Management
+    statement: >-
+      Manage configuration, feature flags, and operational commands for
+      messaging components through a Control Bus, not by ad hoc redeploys
+      or direct database writes.
+  - id: schema-evolution
+    category: Governance
+    statement: >-
+      Version message schemas explicitly and make changes additive when
+      possible; coordinate breaking changes via Message Translator and a
+      planned consumer migration rather than in-place schema mutation.
+  - id: pattern-not-product
+    category: Strategy
+    statement: >-
+      Choose a pattern first and a product (broker, iPaaS, agent
+      framework) second; do not let a vendor's primitives dictate which
+      EIP patterns are available to your architecture.
