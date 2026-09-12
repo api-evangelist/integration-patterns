@@ -58,6 +58,8 @@ url: https://raw.githubusercontent.com/api-evangelist/integration-patterns/refs/
 specificationVersion: '0.23'
 apis: []
 common:
+  - type: Website
+    url: https://www.enterpriseintegrationpatterns.com/
   - type: Reference
     url: https://www.enterpriseintegrationpatterns.com/
   - type: Reference
