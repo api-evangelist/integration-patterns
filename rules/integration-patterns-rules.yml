@@ -1,12 +1,12 @@
-aid: integration-patterns:rules
-name: Integration Patterns Usage Rules
+x-aid: integration-patterns:rules
+x-name: Integration Patterns Usage Rules
 description: >-
   Operational rules and guardrails for applying Enterprise Integration
   Patterns (EIP) to real systems. These rules cover when to use messaging
   versus request/response, channel and endpoint design, routing and
   transformation, error handling, and the operational concerns of system
   management patterns in modern microservice and event-driven environments.
-modified: '2026-04-28'
+x-modified: '2026-04-28'
 rules:
   - id: name-the-pattern
     category: Vocabulary
