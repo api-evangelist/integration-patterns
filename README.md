@@ -1,4 +1,4 @@
-# Integration Patterns (integration-patterns)
+# Integration Patterns
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,34 +66,79 @@
 
 Integration Patterns are design patterns and best practices for integrating different software systems and applications, including messaging, data transformation, and service orchestration approaches. Enterprise Integration Patterns (EIP), as cataloged by Gregor Hohpe and Bobby Woolf, provide a technology-independent vocabulary and visual notation harvested from proven solutions to recurring integration problems, organized into Messaging Channels, Message Construction, Message Routing, Message Transformation, Messaging Endpoints, and System Management.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/integration-patterns/refs/heads/main/apis.yml)
+**Areas:** Asynchronous Messaging · Choreography · Design Patterns · EAI · EIP · Enterprise Architecture · Enterprise Integration Patterns · Event-Driven Architecture · Messaging · Message Routing · Microservices · Orchestration
 
-## Scope
+## Integration Patterns on APIs.io
 
-- **Type:** Index 
-- **Position:** Consumer 
-- **Access:** 3rd-Party 
+Everything profiled for Integration Patterns is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/integration-patterns/](https://apis.io/providers/integration-patterns/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### Published properties
 
- - Asynchronous Messaging, Choreography, Design Patterns, EAI, EIP, Enterprise Architecture, Enterprise Integration Patterns, Event-Driven Architecture, Messaging, Message Routing, Microservices, Orchestration, Software Architecture, System Integration
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Governance rules (1)
 
-- **Created:** 2025-01-01 
-- **Modified:** 2026-04-28 
+Spectral rulesets for the provider's contracts.
 
-## Common Properties
+- [Integration Patterns API Rules](https://apis.io/rules/integration-patterns/integration-patterns-rules/)
 
-- [Reference: Enterprise Integration Patterns](https://www.enterpriseintegrationpatterns.com/)
-- [Reference: Messaging Patterns Catalog](https://www.enterpriseintegrationpatterns.com/patterns/messaging/)
-- [Book: EIP Catalog](https://www.enterpriseintegrationpatterns.com/eaipatterns.html)
-- [Author: Gregor Hohpe](https://www.enterpriseintegrationpatterns.com/gregor.html)
-- [Reference: Wikipedia](https://en.wikipedia.org/wiki/Enterprise_Integration_Patterns)
-- [Rules](rules/integration-patterns-rules.yml)
+## Where to find this API
 
-## Maintainers
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-**FN:** Kin Lane
+- [Website](https://www.enterpriseintegrationpatterns.com/)
 
-**Email:** kin@apievangelist.com
+## API Evangelist rating
+
+**Kin Score 4.0** — minimal · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 48.2 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 0.0 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 0.0** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/integration-patterns/](https://apis.io/providers/integration-patterns/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Integration Patterns: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/integration-patterns/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
